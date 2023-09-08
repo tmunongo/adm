@@ -23,7 +23,7 @@
     </div>
     <div>
         <p>
-            Website by <a href="http://tawandamunongo.tech" target="_blank" class="underline">Webbe Dev</a>
+            Website by <a href="http://tawandamunongo.dev" target="_blank" class="underline">Webbe Dev</a>
         </p>
     </div>
 </footer>

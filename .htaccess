@@ -1,0 +1,10 @@
+Options -Indexes
+RewriteEngine On
+
+# Redirect requests for .php files to the extensionless version
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]
+
+# Redirect requests for directory index to the extensionless version
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.+?)/$ $1 [L]

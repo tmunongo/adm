@@ -2,32 +2,54 @@
 <html lang="en">
 
 <?php
-$pageTitle = 'Home - ADM Electrical';
-$meta_description = "ADM Electrical is a company";
+$pageTitle = 'Taiwan Farm Produce';
 include('includes/headers.php');
 ?>
 
 <body class="bg-[#EDF2EA] min-h-screen min-w-screen">
     <?php include "includes/navbar.php" ?>
     <!-- Banner -->
-    <div id="banner" class="hero min-h-screen">
-        <div class="hero-content text-center">
-            <div class="max-w-md">
-                <div class="">
-                    <img src="assets/images/6.png" alt="logo" class="block mx-auto z-10">
+    <div id="banner" class="h-3/4 bg-[url('assets/images/taiwan/banner.jpg')] bg-center bg-cover mb-4">
+        <div class="hero-content text-center backdrop-brightness-50 min-h-[480px] min-w-full">
+            <div class="flex flex-row justify-around items-center w-full">
+                <div class="flex flex-col items-start text-white text-left">
+                    <p class="text-lg md:text-2xl uppercase">
+                        Welcome to <br><br>
+                    </p>
+                    <p class="text-2xl md:text-5xl">
+                        Taiwan Farm Produce <br>
+                    </p>
+                    <p class="text-base md:text-lg text-gray-300">
+                        Farm Fresh Every Time
+                    </p>
                 </div>
-                <h1 class="text-5xl font-bold py-8">Innovative Solutions Delivering Power to the People</h1>
-                <div class="flex items-center justify-around">
-                    <button class="btn btn-info">
-                        Learn More
-                    </button>
-                    <button class="btn btn-warning">
-                        Solar Solutions
-                    </button>
+                <div>
+                    <img src="assets/images/taiwan/hens.png" alt="hens" srcset="">
                 </div>
             </div>
         </div>
     </div>
+    <div id="ribbon" class="bg-[#EDF2EA] h-32 flex justify-center items-center p-4 text-blue-600">
+        <div class="flex space-x-2 md:space-x-8">
+            <div class="flex flex-col items-center">
+                <i class="fas fa-apple-alt text-6xl mb-1"></i>
+                <span class="text-lg">Fruit Farming</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fas fa-carrot text-6xl mb-1"></i>
+                <span class="text-lg">Vegetable Farming</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fas fa-egg text-6xl mb-1"></i>
+                <span class="text-lg">Grain Farming</span>
+            </div>
+            <div class="flex flex-col items-center">
+                <i class="fa-regular fa-cow text-6xl mb-1"></i>
+                <span class="text-lg">Agri Machinery</span>
+            </div>
+        </div>
+    </div>
+
     <section class="md:h-screen bg-gray-100 flex items-center justify-center">
         <div class="max-w-6xl px-8 py-16 mx-auto">
             <!-- Section Heading -->
