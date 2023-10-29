@@ -5,6 +5,18 @@
 $pageTitle = 'Home - ADM Electrical';
 $meta_description = "ADM Electrical is a company";
 include('includes/headers.php');
+include_once '../admin/Classes/Company.php';
+
+$CompanyObject = new Company();
+$comp_id = "ADMEL";
+
+?>
+
+<?php
+// get company details by unique name
+if (isset($comp_id)) {
+    $company = $CompanyObject->getCompanyDetailsByUniqueName($comp_id);
+}
 ?>
 
 <body class="bg-[#EDF2EA] min-h-screen min-w-screen">
@@ -38,37 +50,21 @@ include('includes/headers.php');
 
             <!-- Services Row -->
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
-                <!-- Service Card 1 -->
-                <div class="bg-white rounded-lg shadow-lg flex flex-col items-center p-6 h-full">
-                    <img class="rounded-md w-44 h-30 mb-4" src="assets/images/equipment.jpg" alt="Service 1">
-                    <h3 class="text-xl font-semibold mb-4">Electrical Equipment Sales</h3>
-                    <p class="text-gray-600">Explore our wide range of high-quality electrical equipment sourced from
-                        reputable manufacturers. Choose reliability and excellence.</p>
-                </div>
+                <?php
+                $services = $CompanyObject->getServicesByCompanyID($company['id']);
+                foreach ($services as $key => $value) {
+                    # code...
+                ?>
+                    <!-- Service Card 1 -->
+                    <div class="bg-white rounded-lg shadow-lg flex flex-col items-center p-6 h-full">
+                        <img class="rounded-md w-44 h-30 mb-4" src="<?= $value['image'] ?>" alt="Service 1">
+                        <h3 class="text-xl font-semibold mb-4"><?= $value['name'] ?></h3>
+                        <p class="text-gray-600"><?= $value['description'] ?></p>
+                    </div>
 
-                <!-- Service Card 2 -->
-                <div class="bg-white rounded-lg shadow-lg flex flex-col items-center p-6 h-full">
-                    <img class="rounded-md w-44 h-30 mb-4" src="assets/images/repairs.jpg" alt="Service 2">
-                    <h3 class="text-xl font-semibold mb-4">Professional Repairs</h3>
-                    <p class="text-gray-600">Count on our skilled technicians to diagnose and repair electrical systems
-                        promptly. Your systems will be running smoothly again in no time.</p>
-                </div>
-
-                <!-- Service Card 3 -->
-                <div class="bg-white rounded-lg shadow-lg flex flex-col items-center p-6 h-full">
-                    <img class="rounded-md w-44 h-30 mb-4" src="assets/images/solar.jpg" alt="Service 3">
-                    <h3 class="text-xl font-semibold mb-4">Solar Electricity System Installation</h3>
-                    <p class="text-gray-600">Embrace the power of the sun with our custom solar electricity solutions.
-                        We offer both commercial and residential installations.</p>
-                </div>
-
-                <!-- Service Card 4 -->
-                <div class="bg-white rounded-lg shadow-lg flex flex-col items-center p-6 h-full">
-                    <img class="rounded-md w-44 h-30 mb-4" src="assets/images/pulling-lines.jpg" alt="Service 4">
-                    <h3 class="text-xl font-semibold mb-4">Pulling Lines</h3>
-                    <p class="text-gray-600">Description for the fourth service goes here. Tailor-made for your
-                        electrical needs.</p>
-                </div>
+                <?php
+                }
+                ?>
             </div>
         </div>
     </section>

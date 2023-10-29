@@ -25,7 +25,7 @@
                 <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 z-1000">
                     <li><a href="/">Home</a></li>
                     <li><a href="about">About Us</a></li>
-                    <li><a href="services">Services</a></li>
+                    <!-- <li><a href="services">Services</a></li> -->
                     <!-- <li>
                     <a>Parent</a>
                     <ul class="p-2">
@@ -34,7 +34,7 @@
                     </ul>
                 </li> -->
                     <li><a href="products">Products</a></li>
-                    <li><a href="taiwan-produce">Taiwan Farm Produce</a></li>
+                    <!-- <li><a href="tadiwa-produce">Tadiwa Farm Produce</a></li> -->
                 </ul>
             </div>
             <a href="./" class="btn btn-ghost normal-case text-xl">
@@ -45,7 +45,7 @@
             <ul class="menu menu-horizontal px-1">
                 <li class="text-lg text-black"><a href="./">Home</a></li>
                 <li class="text-lg text-black"><a href="about">About Us</a></li>
-                <li class="text-lg text-black"><a href="services">Services</a></li>
+                <!-- <li class="text-lg text-black"><a href="services">Services</a></li> -->
                 <!-- <li tabindex="0">
                 <details>
                     <summary class="text-lg text-black">Parent</summary>
@@ -56,7 +56,7 @@
                 </details>
             </li> -->
                 <li class="text-lg text-black"><a href="products">Products</a></li>
-                <li class="text-lg text-black"><a href="taiwan-produce">Taiwan Produce</a></li>
+                <!-- <li class="text-lg text-black"><a href="tadiwa-produce">Tadiwa Produce</a></li> -->
             </ul>
         </div>
         <div class="navbar-end">

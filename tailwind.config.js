@@ -2,7 +2,7 @@ module.exports = {
     theme: {
       extend: {
         backgroundImage: {
-          'hero-pattern': "url('assets/images/taiwan/banner.jpg')",
+          'hero-pattern': "url('assets/images/tadiwa/banner.jpg')",
         }
       }
     }
